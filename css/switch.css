@@ -1,0 +1,79 @@
+:root {
+    --switch-height: 30px;
+    --circle-size: 25px;
+    --switch-padding: calc((var(--switch-height) - var(--circle-size)) / 2);
+    --switch-color: #ddd;
+    --circle-color: grey;
+    --switch-transtion: 0.5s;
+}
+
+form {
+    padding: 50px;
+}
+
+.switch {
+    width: calc(2 * var(--circle-size) + 2 * var(--switch-padding));
+    height: var(--switch-height);
+    padding: var(--switch-padding);
+    border-radius: calc(var(--switch-height) / 2);
+    transition: var(--switch-transtion);
+    appearance: none;
+    background-color: var(--switch-color);
+}
+
+.switch::after {
+    content: "";
+    display: inline-block;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    transition: var(--switch-transtion);
+    background-color: var(--circle-color);
+}
+
+.switch:checked {
+    background-color: var(--circle-color);
+}
+
+.switch:checked::after {
+    margin-left: var(--circle-size);
+    background-color: var(--switch-color);
+}
+
+input {
+    position: relative;
+    top: 80px;
+    right: 70px;
+}
+
+label {
+    color: #A4A6B3;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    left: 60px;
+    bottom: 25px;
+}
+
+.bottom-btn img {
+    width: 31px;
+    height: 30px;
+    position: relative;
+    right: 10px;
+
+}
+
+.bottom-btn a {
+    color: #A4A6B3;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    left: 60px;
+    bottom: 55px;
+}
